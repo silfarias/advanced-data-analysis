@@ -1,0 +1,1001 @@
+id,department,performance_score,years_with_company,salary
+1,Support,2.85,1,4.78
+2,Business Development,2.85,1,5.48
+3,Human Resources,9.17,1,9.41
+4,Support,5.83,1,3.1
+5,Product Management,2.11,1,5.57
+6,Accounting,1.28,1,1.86
+7,Human Resources,7.03,1,9.58
+8,Business Development,9.1,1,8.09
+9,Research and Development,8.72,1,4.28
+10,Accounting,8.65,1,6.74
+11,Business Development,9.55,1,4.55
+12,Support,9.26,1,8.47
+13,Research and Development,6.47,1,3.83
+14,Business Development,9.63,1,9.2
+15,Business Development,8.63,1,1.04
+16,Support,3.27,1,8.86
+17,Legal,5.16,1,7.42
+18,Legal,8.37,1,4.49
+19,Research and Development,7.86,1,5.52
+20,Product Management,5.75,1,1.83
+21,Human Resources,1.54,1,7.48
+22,Research and Development,2.23,1,1.09
+23,Business Development,5.92,1,3.03
+24,Business Development,3.69,1,7.41
+25,Product Management,1.98,1,1.14
+26,Services,3.8,1,9.35
+27,Legal,6.43,1,5.01
+28,Research and Development,9.17,1,2.64
+29,Training,2.54,1,8.43
+30,Accounting,7.13,1,6.36
+31,Accounting,6.86,1,7.62
+32,Training,9.67,1,1.59
+33,Human Resources,8.28,1,3.31
+34,Support,9.01,1,2.04
+35,Engineering,5.85,1,1.34
+36,Sales,1.27,1,3.56
+37,Business Development,7.95,1,8.98
+38,Marketing,3.24,1,3.41
+39,Engineering,8.33,1,6.98
+40,Business Development,4.63,1,7.92
+41,Product Management,6.86,1,5.86
+42,Support,6.92,1,9.47
+43,Human Resources,6.85,1,8.37
+44,Support,4.75,1,7.71
+45,Services,6.29,1,5.98
+46,Business Development,5.57,1,1.41
+47,Engineering,3.13,1,1.4
+48,Marketing,4.53,1,6.37
+49,Research and Development,7.54,1,9.06
+50,Product Management,2.16,1,2.86
+51,Research and Development,3.02,1,8.65
+52,Marketing,3.55,1,7.61
+53,Business Development,2.22,1,2.71
+54,Training,8.08,1,1.51
+55,Accounting,6.37,1,8.57
+56,Legal,1.44,1,1.06
+57,Support,5.18,1,2.4
+58,Legal,1.52,1,5.03
+59,Accounting,7.62,1,1.24
+60,Training,2.46,1,9.37
+61,Engineering,6.3,1,7.44
+62,Engineering,9.57,1,4.31
+63,Support,5.75,1,2.34
+64,Sales,1.52,1,3.46
+65,Research and Development,7.77,1,8.99
+66,Business Development,3.01,1,7.67
+67,Sales,9.88,1,4.61
+68,Marketing,9.68,1,5.95
+69,Business Development,9.27,1,2.84
+70,Legal,2.62,1,5.45
+71,Support,1.27,1,2.1
+72,Marketing,6.43,1,2.03
+73,Accounting,3.38,1,5.17
+74,Research and Development,5.45,1,3.34
+75,Engineering,3.83,1,3.95
+76,Training,4.51,1,4.17
+77,Services,5.49,1,8.73
+78,Training,5.47,1,4.45
+79,Services,4.34,1,5.84
+80,Accounting,6.07,1,2.14
+81,Engineering,1.15,1,2.12
+82,Human Resources,1.43,1,1.54
+83,Support,1.61,1,6.82
+84,Marketing,8.91,1,9.93
+85,Business Development,6.84,1,6.69
+86,Legal,4.15,1,8.11
+87,Legal,7.49,1,2.09
+88,Services,7.27,1,8.02
+89,Research and Development,4.67,1,7.7
+90,Research and Development,8.04,1,8.86
+91,Sales,6.18,1,1.37
+92,Training,4.45,1,9.85
+93,Product Management,3.37,1,4.44
+94,Support,6.52,1,7.8
+95,Product Management,7.87,1,2.29
+96,Marketing,8.51,1,2.28
+97,Product Management,5.48,1,4.8
+98,Product Management,5.07,1,9.32
+99,Business Development,9.16,1,5.38
+100,Support,4.58,1,5.86
+101,Engineering,3.96,1,2.63
+102,Sales,6.3,1,4.82
+103,Marketing,4.27,1,1.96
+104,Human Resources,2.65,1,3.48
+105,Research and Development,9.52,1,8.19
+106,Legal,5.19,1,1.33
+107,Product Management,3.04,1,7.4
+108,Services,6.1,1,9.9
+109,Engineering,4.52,1,5.48
+110,Business Development,6.93,1,1.97
+111,Training,9.35,1,9.47
+112,Human Resources,6.37,1,6.81
+113,Research and Development,2.69,1,3.89
+114,Legal,7.53,1,7.06
+115,Business Development,1.52,1,7.8
+116,Accounting,1.15,1,4.3
+117,Engineering,7.47,1,1.3
+118,Marketing,6.72,1,6.05
+119,Business Development,5.01,1,5.21
+120,Engineering,9.49,1,7.83
+121,Human Resources,8.05,1,4.44
+122,Legal,4.43,1,1.47
+123,Marketing,6.44,1,8.58
+124,Sales,9.38,1,4.32
+125,Services,9.24,1,6.15
+126,Sales,6.24,1,2.04
+127,Services,7.32,1,6.89
+128,Human Resources,4.34,1,9.92
+129,Business Development,7.67,1,1.94
+130,Marketing,9.3,1,5.43
+131,Research and Development,7.46,1,9.38
+132,Training,6.06,1,5.48
+133,Training,5.22,1,9.9
+134,Sales,3.79,1,3.23
+135,Engineering,5.01,1,9.66
+136,Human Resources,7.84,1,7.36
+137,Sales,7.78,1,8.61
+138,Services,5.28,1,5.55
+139,Marketing,4.32,1,4.88
+140,Training,1.38,1,4.71
+141,Product Management,5.94,1,9.83
+142,Marketing,1.72,1,3.78
+143,Business Development,6.94,1,6.19
+144,Accounting,9.34,1,2.02
+145,Training,1.07,1,1.84
+146,Legal,3.2,1,2.09
+147,Marketing,7.18,1,5.34
+148,Product Management,2.14,1,8.01
+149,Research and Development,1.58,1,6.3
+150,Marketing,3.8,1,5.84
+151,Accounting,4.55,1,7.87
+152,Accounting,1.9,1,5.15
+153,Human Resources,7.97,1,7.98
+154,Research and Development,9.45,1,1.02
+155,Training,5.98,1,7.61
+156,Research and Development,5.6,1,1.1
+157,Legal,5.18,1,8.27
+158,Human Resources,2.91,1,5.44
+159,Legal,3.55,1,4.35
+160,Engineering,2.99,1,8.3
+161,Marketing,4.55,1,5.49
+162,Sales,1.76,1,3.41
+163,Research and Development,9.42,1,4.04
+164,Accounting,1.89,1,9.63
+165,Services,4.96,1,9.47
+166,Marketing,2.56,1,9.52
+167,Marketing,8.55,1,7.53
+168,Research and Development,1.76,1,1.79
+169,Legal,1.96,1,9.25
+170,Services,1.17,1,5.49
+171,Legal,6.25,1,4.23
+172,Engineering,9.27,1,8.61
+173,Human Resources,3.93,1,2.79
+174,Training,6.81,1,8.6
+175,Sales,9.36,1,1.14
+176,Legal,7.95,1,1.6
+177,Human Resources,6.89,1,2.69
+178,Legal,6.06,1,2.92
+179,Services,3.69,1,2.37
+180,Training,2.7,1,6.79
+181,Legal,9.87,1,7.6
+182,Accounting,4.78,1,1.33
+183,Research and Development,3.68,1,6.67
+184,Legal,9.53,1,6.64
+185,Business Development,8.04,1,3.3
+186,Product Management,6.77,1,3.09
+187,Engineering,9.83,1,6.71
+188,Services,7.44,1,6.26
+189,Engineering,5.21,1,3.16
+190,Product Management,3.11,1,6.17
+191,Human Resources,8.07,1,6.34
+192,Human Resources,5.54,1,8.21
+193,Business Development,2.34,1,3.82
+194,Training,3.44,1,6.28
+195,Support,6.39,1,9.03
+196,Human Resources,2.19,1,5.16
+197,Accounting,4.82,1,1.57
+198,Support,4.26,1,5.94
+199,Product Management,7.98,1,9.55
+200,Accounting,4.61,1,3.67
+201,Legal,6.13,1,1.63
+202,Services,9.1,1,4.44
+203,Services,5.89,1,2.85
+204,Training,9.82,1,4.48
+205,Business Development,4.23,1,5.87
+206,Marketing,9.28,1,5.29
+207,Accounting,2.92,1,8.04
+208,Human Resources,5.46,1,2.83
+209,Training,2.37,1,3.88
+210,Legal,9.33,1,1.13
+211,Sales,3.36,1,4.49
+212,Research and Development,3.18,1,1.41
+213,Product Management,3.16,1,6.06
+214,Marketing,4.02,1,3.36
+215,Support,6.23,1,3.74
+216,Business Development,4.23,1,8.26
+217,Accounting,6.29,1,6.14
+218,Accounting,8.46,1,2.94
+219,Sales,2.95,1,4.83
+220,Human Resources,5.13,1,1.14
+221,Business Development,3.79,1,3.63
+222,Training,8.71,1,7.06
+223,Training,2.74,1,9.52
+224,Human Resources,8.43,1,6.2
+225,Support,2.91,1,7.41
+226,Engineering,4.73,1,4.33
+227,Product Management,7.14,1,9.22
+228,Accounting,8.04,1,6.98
+229,Sales,5.35,1,8.65
+230,Human Resources,8.63,1,8.71
+231,Product Management,2.78,1,3.19
+232,Research and Development,2.14,1,6.35
+233,Product Management,8.2,1,3.49
+234,Services,5.21,1,7.7
+235,Accounting,3.54,1,8.32
+236,Sales,5.0,1,5.04
+237,Engineering,6.97,1,7.76
+238,Research and Development,6.14,1,8.27
+239,Sales,9.21,1,8.08
+240,Human Resources,6.58,1,6.72
+241,Services,3.47,1,4.5
+242,Support,5.85,1,3.71
+243,Support,4.29,1,7.39
+244,Accounting,5.14,1,7.68
+245,Engineering,2.04,1,3.15
+246,Research and Development,3.1,1,4.2
+247,Sales,4.46,1,3.0
+248,Accounting,8.02,1,2.19
+249,Product Management,1.56,1,5.93
+250,Training,4.71,1,4.59
+251,Legal,3.01,1,7.22
+252,Accounting,9.98,1,8.85
+253,Support,6.44,1,6.51
+254,Product Management,3.65,1,7.58
+255,Support,7.5,1,6.83
+256,Human Resources,3.15,1,6.81
+257,Training,1.46,1,4.55
+258,Engineering,8.59,1,4.21
+259,Support,8.66,1,6.15
+260,Services,8.1,1,7.5
+261,Research and Development,4.87,1,1.7
+262,Product Management,9.85,1,9.51
+263,Services,8.69,1,2.36
+264,Services,9.85,1,4.8
+265,Product Management,5.5,1,3.61
+266,Support,2.24,1,9.08
+267,Training,2.32,1,9.21
+268,Legal,9.12,1,8.08
+269,Sales,4.56,1,9.39
+270,Research and Development,8.97,1,4.73
+271,Human Resources,7.78,1,6.03
+272,Engineering,7.03,1,4.94
+273,Services,7.1,1,1.87
+274,Business Development,8.85,1,5.19
+275,Marketing,3.44,1,3.35
+276,Support,8.81,1,9.46
+277,Services,8.31,1,8.98
+278,Business Development,9.42,1,6.74
+279,Support,8.46,1,7.99
+280,Services,1.15,1,8.91
+281,Training,2.12,1,6.01
+282,Research and Development,3.55,1,6.62
+283,Business Development,7.21,1,6.61
+284,Accounting,7.75,1,2.37
+285,Engineering,3.04,1,6.88
+286,Accounting,7.54,1,4.6
+287,Product Management,7.72,1,9.8
+288,Human Resources,1.77,1,2.3
+289,Human Resources,4.01,1,3.24
+290,Product Management,7.5,1,2.59
+291,Business Development,8.25,1,8.07
+292,Sales,6.78,1,9.69
+293,Product Management,1.46,1,8.44
+294,Accounting,7.09,1,4.01
+295,Sales,6.67,1,2.36
+296,Engineering,9.49,1,7.33
+297,Support,1.72,1,5.93
+298,Human Resources,6.57,1,5.96
+299,Accounting,3.29,1,1.56
+300,Services,3.46,1,1.97
+301,Engineering,7.36,1,8.12
+302,Engineering,6.67,1,7.29
+303,Accounting,3.65,1,9.18
+304,Marketing,1.05,1,8.59
+305,Human Resources,6.18,1,5.66
+306,Services,7.2,1,3.29
+307,Business Development,6.03,1,6.85
+308,Training,3.58,1,2.42
+309,Sales,8.55,1,8.5
+310,Marketing,9.05,1,8.24
+311,Support,6.89,1,2.5
+312,Engineering,8.4,1,5.45
+313,Research and Development,6.47,1,2.77
+314,Product Management,3.21,1,2.23
+315,Sales,4.38,1,3.96
+316,Services,7.75,1,9.78
+317,Engineering,7.07,1,9.28
+318,Accounting,6.39,1,8.34
+319,Services,6.48,1,9.81
+320,Business Development,6.52,1,7.68
+321,Legal,9.66,1,2.65
+322,Human Resources,1.18,1,3.5
+323,Legal,8.36,1,6.39
+324,Legal,6.1,1,2.75
+325,Engineering,2.8,1,4.14
+326,Accounting,8.72,1,4.51
+327,Sales,9.0,1,7.9
+328,Human Resources,5.14,1,7.59
+329,Accounting,5.46,1,3.6
+330,Training,4.49,1,5.17
+331,Marketing,5.09,1,8.95
+332,Human Resources,8.58,1,2.11
+333,Research and Development,6.28,1,8.03
+334,Product Management,9.98,1,9.97
+335,Training,2.42,1,4.91
+336,Accounting,3.26,1,1.38
+337,Training,7.17,1,9.08
+338,Training,1.18,1,1.76
+339,Accounting,6.42,1,5.34
+340,Training,4.43,1,6.88
+341,Accounting,6.78,1,5.02
+342,Marketing,4.05,1,5.53
+343,Marketing,2.44,1,2.28
+344,Training,4.17,1,7.58
+345,Legal,3.83,1,5.25
+346,Human Resources,9.34,1,9.93
+347,Human Resources,4.22,1,2.19
+348,Research and Development,9.01,1,4.91
+349,Accounting,4.21,1,2.08
+350,Product Management,3.07,1,3.45
+351,Research and Development,4.34,1,7.55
+352,Research and Development,8.4,1,9.3
+353,Research and Development,4.67,1,3.88
+354,Business Development,1.3,1,2.83
+355,Engineering,2.88,1,6.67
+356,Marketing,1.71,1,7.17
+357,Business Development,8.63,1,8.22
+358,Accounting,6.23,1,9.72
+359,Engineering,9.56,1,8.44
+360,Human Resources,1.77,1,6.92
+361,Sales,2.86,1,1.07
+362,Support,5.41,1,8.05
+363,Accounting,5.9,1,8.54
+364,Support,1.7,1,4.77
+365,Services,7.04,1,9.75
+366,Product Management,9.66,1,9.77
+367,Marketing,2.88,1,2.06
+368,Training,8.19,1,8.28
+369,Research and Development,5.56,1,1.72
+370,Engineering,5.05,1,4.34
+371,Product Management,1.41,1,3.91
+372,Accounting,6.55,1,7.63
+373,Business Development,9.24,1,6.97
+374,Support,6.72,1,4.13
+375,Research and Development,4.64,1,1.85
+376,Legal,4.98,1,6.19
+377,Sales,3.43,1,8.9
+378,Product Management,2.71,1,1.97
+379,Accounting,2.21,1,4.98
+380,Engineering,4.9,1,6.15
+381,Research and Development,3.25,1,4.35
+382,Product Management,4.27,1,6.77
+383,Product Management,8.83,1,2.59
+384,Accounting,2.0,1,3.93
+385,Research and Development,7.68,1,1.11
+386,Product Management,3.38,1,9.01
+387,Services,3.19,1,1.37
+388,Legal,4.35,1,9.46
+389,Research and Development,8.77,1,3.28
+390,Training,1.34,1,9.85
+391,Services,5.16,1,4.56
+392,Research and Development,7.49,1,3.94
+393,Support,2.99,1,6.95
+394,Research and Development,2.4,1,1.92
+395,Human Resources,9.29,1,8.91
+396,Training,9.91,1,9.93
+397,Product Management,6.94,1,5.33
+398,Marketing,6.66,1,3.48
+399,Services,2.8,1,6.86
+400,Services,5.5,1,7.85
+401,Marketing,4.03,1,2.33
+402,Accounting,9.5,1,8.08
+403,Training,7.45,1,1.36
+404,Training,1.49,1,5.9
+405,Legal,9.91,1,1.9
+406,Business Development,4.62,1,3.34
+407,Research and Development,9.86,1,2.31
+408,Accounting,9.7,1,4.99
+409,Accounting,6.79,1,8.21
+410,Engineering,6.28,1,3.75
+411,Accounting,5.43,1,5.86
+412,Accounting,6.78,1,2.64
+413,Product Management,7.63,1,4.7
+414,Sales,3.41,1,5.9
+415,Engineering,9.47,1,7.28
+416,Accounting,1.4,1,1.45
+417,Product Management,8.2,1,1.37
+418,Business Development,1.41,1,7.06
+419,Marketing,3.13,1,9.61
+420,Product Management,9.77,1,6.53
+421,Marketing,4.1,1,2.37
+422,Training,8.61,1,8.55
+423,Human Resources,9.91,1,8.48
+424,Accounting,5.6,1,4.39
+425,Marketing,8.69,1,2.75
+426,Services,5.34,1,6.02
+427,Services,3.51,1,7.04
+428,Accounting,4.52,1,4.55
+429,Business Development,6.02,1,9.0
+430,Accounting,4.63,1,1.51
+431,Business Development,4.15,1,1.36
+432,Legal,6.14,1,5.52
+433,Training,1.38,1,9.42
+434,Sales,8.79,1,4.64
+435,Training,9.55,1,3.59
+436,Marketing,2.04,1,1.15
+437,Engineering,3.03,1,4.94
+438,Research and Development,3.17,1,3.29
+439,Engineering,3.0,1,6.14
+440,Sales,8.71,1,9.76
+441,Product Management,5.34,1,9.47
+442,Marketing,1.31,1,5.54
+443,Engineering,3.66,1,7.5
+444,Support,7.22,1,9.38
+445,Training,7.19,1,6.27
+446,Business Development,1.8,1,6.46
+447,Sales,7.92,1,9.66
+448,Support,7.31,1,1.47
+449,Marketing,3.7,1,6.31
+450,Human Resources,8.13,1,4.81
+451,Human Resources,4.22,1,4.35
+452,Training,1.96,1,6.19
+453,Marketing,9.63,1,2.18
+454,Engineering,6.01,1,5.87
+455,Engineering,7.16,1,3.56
+456,Research and Development,4.47,1,2.81
+457,Support,8.69,1,7.6
+458,Research and Development,4.08,1,1.54
+459,Sales,8.76,1,1.5
+460,Sales,3.5,1,2.12
+461,Engineering,6.53,1,6.28
+462,Accounting,1.48,1,4.7
+463,Business Development,4.79,1,6.75
+464,Business Development,5.42,1,3.17
+465,Training,9.14,1,5.04
+466,Human Resources,7.41,1,9.37
+467,Marketing,5.88,1,6.81
+468,Legal,7.56,1,8.14
+469,Research and Development,3.87,1,9.05
+470,Accounting,6.23,1,3.04
+471,Research and Development,3.88,1,6.91
+472,Sales,4.5,1,7.79
+473,Legal,7.74,1,7.05
+474,Legal,1.37,1,2.99
+475,Sales,4.62,1,8.13
+476,Business Development,3.3,1,5.28
+477,Support,5.49,1,8.18
+478,Marketing,4.36,1,5.19
+479,Sales,8.33,1,8.83
+480,Business Development,5.73,1,1.73
+481,Human Resources,9.8,1,7.76
+482,Legal,8.15,1,4.47
+483,Sales,5.42,1,6.4
+484,Product Management,4.28,1,7.08
+485,Human Resources,7.14,1,2.14
+486,Services,1.57,1,3.41
+487,Legal,2.12,1,7.21
+488,Research and Development,9.0,1,6.35
+489,Sales,2.02,1,9.09
+490,Human Resources,1.04,1,2.82
+491,Support,4.03,1,4.16
+492,Training,5.7,1,6.49
+493,Engineering,8.09,1,2.79
+494,Product Management,1.19,1,1.55
+495,Research and Development,9.74,1,4.25
+496,Legal,2.1,1,1.85
+497,Engineering,5.89,1,5.12
+498,Engineering,1.57,1,4.34
+499,Engineering,1.29,1,7.08
+500,Legal,1.47,1,3.45
+501,Research and Development,4.34,1,9.37
+502,Business Development,4.76,1,3.01
+503,Training,5.41,1,1.13
+504,Product Management,5.35,1,8.92
+505,Marketing,1.03,1,2.88
+506,Legal,7.0,1,8.53
+507,Training,3.59,1,6.86
+508,Marketing,8.04,1,8.35
+509,Research and Development,1.42,1,6.27
+510,Research and Development,6.48,1,5.45
+511,Marketing,3.89,1,7.99
+512,Human Resources,3.91,1,1.73
+513,Human Resources,1.98,1,9.39
+514,Product Management,5.11,1,5.24
+515,Legal,1.71,1,9.39
+516,Engineering,6.17,1,2.19
+517,Accounting,8.92,1,8.2
+518,Services,7.31,1,5.87
+519,Accounting,6.75,1,5.68
+520,Support,6.15,1,8.21
+521,Business Development,6.55,1,6.3
+522,Product Management,4.24,1,4.36
+523,Training,6.73,1,1.88
+524,Product Management,6.09,1,5.92
+525,Engineering,5.83,1,2.63
+526,Services,6.82,1,3.84
+527,Engineering,8.81,1,7.01
+528,Engineering,6.82,1,9.71
+529,Research and Development,2.46,1,4.24
+530,Product Management,8.86,1,3.24
+531,Research and Development,2.35,1,1.3
+532,Human Resources,6.1,1,6.78
+533,Business Development,5.65,1,9.31
+534,Human Resources,5.82,1,7.97
+535,Research and Development,3.69,1,3.01
+536,Engineering,5.33,1,9.11
+537,Engineering,7.17,1,6.12
+538,Support,4.1,1,5.52
+539,Accounting,6.7,1,4.06
+540,Business Development,2.65,1,8.53
+541,Services,5.42,1,6.08
+542,Research and Development,4.71,1,5.68
+543,Product Management,5.01,1,2.03
+544,Research and Development,7.54,1,6.12
+545,Engineering,9.16,1,4.36
+546,Research and Development,6.02,1,4.43
+547,Services,7.8,1,4.86
+548,Support,2.99,1,3.14
+549,Product Management,4.21,1,1.65
+550,Business Development,6.03,1,8.87
+551,Business Development,4.34,1,5.56
+552,Services,3.89,1,4.14
+553,Human Resources,4.64,1,4.94
+554,Research and Development,4.59,1,1.24
+555,Human Resources,2.0,1,3.55
+556,Engineering,4.66,1,5.1
+557,Human Resources,5.36,1,4.85
+558,Support,4.45,1,5.83
+559,Marketing,5.97,1,2.79
+560,Engineering,9.51,1,8.69
+561,Services,6.24,1,2.43
+562,Research and Development,4.65,1,3.82
+563,Human Resources,9.48,1,7.9
+564,Services,8.08,1,8.87
+565,Legal,6.99,1,3.99
+566,Research and Development,2.27,1,2.18
+567,Sales,8.53,1,6.75
+568,Research and Development,3.66,1,2.53
+569,Accounting,9.48,1,1.79
+570,Marketing,4.69,1,1.37
+571,Sales,2.64,1,6.2
+572,Product Management,9.99,1,9.1
+573,Research and Development,1.25,1,3.05
+574,Legal,7.55,1,3.93
+575,Services,2.42,1,6.14
+576,Sales,8.91,1,2.8
+577,Services,2.47,1,3.4
+578,Human Resources,4.0,1,4.34
+579,Sales,7.19,1,3.29
+580,Research and Development,7.97,1,4.77
+581,Research and Development,5.42,1,5.89
+582,Engineering,5.86,1,7.02
+583,Research and Development,4.5,1,6.48
+584,Training,9.88,1,1.9
+585,Support,7.57,1,9.55
+586,Legal,8.6,1,8.72
+587,Training,5.0,1,9.06
+588,Research and Development,1.84,1,8.12
+589,Human Resources,9.81,1,8.11
+590,Legal,3.57,1,8.44
+591,Services,3.35,1,6.24
+592,Engineering,9.23,1,2.19
+593,Human Resources,7.7,1,3.58
+594,Human Resources,1.9,1,3.51
+595,Marketing,5.74,1,1.84
+596,Product Management,3.44,1,8.85
+597,Legal,7.21,1,2.0
+598,Engineering,9.07,1,8.64
+599,Accounting,8.51,1,5.49
+600,Sales,5.89,1,1.45
+601,Human Resources,8.74,1,2.28
+602,Services,4.89,1,4.34
+603,Business Development,3.93,1,4.57
+604,Sales,6.64,1,3.57
+605,Support,6.4,1,1.61
+606,Training,5.23,1,7.27
+607,Legal,2.67,1,4.78
+608,Human Resources,2.26,1,2.99
+609,Support,8.8,1,7.36
+610,Product Management,6.72,1,8.11
+611,Research and Development,3.73,1,3.73
+612,Business Development,4.41,1,1.9
+613,Training,3.67,1,7.62
+614,Engineering,2.29,1,2.44
+615,Legal,8.63,1,1.86
+616,Sales,3.7,1,7.79
+617,Business Development,8.34,1,6.66
+618,Services,3.09,1,9.42
+619,Research and Development,4.14,1,3.08
+620,Human Resources,1.92,1,7.35
+621,Sales,7.99,1,8.72
+622,Research and Development,9.9,1,6.87
+623,Human Resources,9.7,1,4.88
+624,Product Management,3.49,1,4.7
+625,Human Resources,6.94,1,6.96
+626,Support,7.05,1,7.2
+627,Support,7.15,1,8.32
+628,Business Development,1.68,1,9.09
+629,Product Management,5.64,1,2.53
+630,Research and Development,9.34,1,6.24
+631,Legal,7.89,1,9.99
+632,Training,8.51,1,1.39
+633,Research and Development,6.47,1,8.83
+634,Engineering,3.98,1,1.76
+635,Legal,1.17,1,2.1
+636,Accounting,4.31,1,1.35
+637,Sales,3.14,1,1.05
+638,Support,8.76,1,7.59
+639,Business Development,6.53,1,8.27
+640,Accounting,3.67,1,3.37
+641,Research and Development,2.22,1,5.11
+642,Engineering,1.66,1,5.76
+643,Engineering,9.07,1,2.59
+644,Legal,6.42,1,3.24
+645,Engineering,6.97,1,6.15
+646,Marketing,7.44,1,9.2
+647,Human Resources,1.73,1,9.01
+648,Support,2.09,1,1.79
+649,Training,5.22,1,6.8
+650,Research and Development,5.63,1,7.58
+651,Human Resources,1.38,1,9.21
+652,Sales,5.1,1,3.59
+653,Business Development,2.57,1,5.61
+654,Support,6.46,1,6.48
+655,Marketing,5.52,1,9.48
+656,Support,6.42,1,2.51
+657,Engineering,5.68,1,1.94
+658,Business Development,5.0,1,3.74
+659,Engineering,3.2,1,6.63
+660,Research and Development,8.99,1,7.83
+661,Training,7.25,1,6.37
+662,Support,9.6,1,5.01
+663,Human Resources,2.06,1,1.45
+664,Business Development,6.97,1,4.4
+665,Services,6.3,1,1.18
+666,Human Resources,5.16,1,3.98
+667,Services,8.09,1,8.79
+668,Accounting,1.02,1,5.65
+669,Sales,9.14,1,3.93
+670,Marketing,9.94,1,7.89
+671,Services,6.8,1,2.7
+672,Marketing,1.34,1,9.13
+673,Accounting,4.25,1,3.42
+674,Accounting,5.41,1,6.65
+675,Support,2.49,1,8.84
+676,Engineering,2.78,1,2.31
+677,Legal,2.16,1,5.39
+678,Training,4.28,1,1.57
+679,Sales,4.76,1,9.7
+680,Business Development,5.95,1,3.41
+681,Human Resources,1.27,1,4.52
+682,Marketing,8.43,1,9.38
+683,Engineering,5.52,1,4.16
+684,Human Resources,8.76,1,4.54
+685,Legal,1.53,1,4.95
+686,Product Management,2.19,1,5.68
+687,Research and Development,6.27,1,6.14
+688,Training,1.32,1,6.11
+689,Legal,5.98,1,2.56
+690,Services,7.55,1,2.45
+691,Marketing,1.2,1,5.47
+692,Services,4.36,1,2.68
+693,Marketing,4.15,1,3.98
+694,Business Development,8.03,1,2.28
+695,Accounting,7.83,1,6.38
+696,Support,6.63,1,7.47
+697,Engineering,1.28,1,7.59
+698,Marketing,2.46,1,1.79
+699,Training,8.52,1,6.88
+700,Engineering,3.73,1,5.21
+701,Engineering,7.37,1,6.86
+702,Research and Development,4.68,1,3.45
+703,Legal,4.0,1,4.54
+704,Engineering,8.68,1,5.24
+705,Support,8.62,1,8.16
+706,Product Management,1.61,1,5.44
+707,Engineering,2.97,1,8.03
+708,Business Development,1.46,1,9.27
+709,Research and Development,6.47,1,9.49
+710,Legal,6.67,1,5.98
+711,Legal,1.3,1,6.6
+712,Legal,9.42,1,5.83
+713,Human Resources,8.02,1,8.45
+714,Sales,9.41,1,1.93
+715,Engineering,5.55,1,9.56
+716,Training,6.81,1,6.59
+717,Human Resources,5.42,1,9.47
+718,Training,9.4,1,4.64
+719,Engineering,7.27,1,6.75
+720,Research and Development,5.82,1,5.63
+721,Product Management,9.34,1,3.17
+722,Marketing,5.8,1,6.92
+723,Human Resources,2.52,1,1.05
+724,Research and Development,1.03,1,9.28
+725,Human Resources,8.99,1,4.06
+726,Marketing,2.48,1,5.05
+727,Research and Development,7.16,1,5.83
+728,Product Management,5.22,1,5.7
+729,Research and Development,9.47,1,3.39
+730,Training,8.85,1,5.13
+731,Engineering,6.92,1,8.7
+732,Human Resources,4.35,1,3.31
+733,Research and Development,1.81,1,7.51
+734,Product Management,9.25,1,4.69
+735,Training,6.23,1,7.25
+736,Business Development,2.96,1,2.85
+737,Sales,1.22,1,5.77
+738,Support,3.48,1,8.59
+739,Marketing,1.87,1,1.02
+740,Services,2.45,1,3.95
+741,Marketing,4.59,1,8.01
+742,Research and Development,1.5,1,7.03
+743,Accounting,1.39,1,8.13
+744,Sales,5.09,1,9.28
+745,Support,9.12,1,8.86
+746,Human Resources,3.26,1,2.79
+747,Business Development,9.89,1,2.5
+748,Product Management,2.42,1,6.88
+749,Human Resources,1.44,1,5.8
+750,Accounting,9.01,1,3.17
+751,Engineering,8.57,1,6.33
+752,Product Management,3.61,1,1.59
+753,Training,7.57,1,2.79
+754,Research and Development,5.34,1,2.79
+755,Marketing,7.39,1,8.42
+756,Product Management,3.68,1,8.84
+757,Engineering,2.89,1,7.23
+758,Business Development,4.64,1,1.92
+759,Business Development,9.33,1,8.61
+760,Human Resources,1.76,1,6.61
+761,Training,4.71,1,7.7
+762,Sales,8.48,1,1.77
+763,Marketing,6.77,1,6.61
+764,Product Management,7.67,1,1.65
+765,Human Resources,3.27,1,4.68
+766,Legal,8.04,1,5.13
+767,Sales,4.93,1,5.36
+768,Services,2.31,1,8.22
+769,Sales,3.29,1,9.46
+770,Human Resources,9.53,1,9.87
+771,Support,1.81,1,5.96
+772,Marketing,7.85,1,5.74
+773,Training,3.7,1,4.07
+774,Support,2.46,1,8.34
+775,Human Resources,6.95,1,9.65
+776,Product Management,5.11,1,7.05
+777,Support,2.46,1,8.93
+778,Research and Development,6.02,1,5.72
+779,Human Resources,4.5,1,5.7
+780,Legal,4.52,1,2.58
+781,Research and Development,2.98,1,2.81
+782,Business Development,7.47,1,6.83
+783,Engineering,7.93,1,6.28
+784,Support,6.69,1,5.54
+785,Business Development,7.86,1,8.59
+786,Accounting,4.69,1,6.71
+787,Training,1.45,1,7.92
+788,Engineering,4.6,1,8.17
+789,Services,8.45,1,5.14
+790,Services,3.83,1,5.63
+791,Product Management,3.5,1,4.83
+792,Business Development,2.38,1,3.43
+793,Support,6.2,1,5.53
+794,Services,2.44,1,2.42
+795,Research and Development,1.64,1,5.34
+796,Research and Development,9.16,1,5.37
+797,Engineering,6.29,1,7.82
+798,Services,7.5,1,5.0
+799,Training,6.82,1,3.49
+800,Legal,5.26,1,6.84
+801,Legal,4.11,1,1.79
+802,Marketing,4.73,1,6.04
+803,Training,6.64,1,6.73
+804,Engineering,9.65,1,3.33
+805,Support,5.81,1,4.68
+806,Support,5.58,1,5.75
+807,Training,5.84,1,2.71
+808,Legal,5.97,1,7.71
+809,Research and Development,4.8,1,2.07
+810,Sales,7.77,1,1.39
+811,Human Resources,7.14,1,6.53
+812,Marketing,1.89,1,7.46
+813,Sales,1.07,1,2.83
+814,Product Management,3.6,1,4.24
+815,Legal,5.57,1,2.82
+816,Legal,1.76,1,2.43
+817,Engineering,7.9,1,7.04
+818,Services,4.04,1,7.78
+819,Engineering,7.05,1,4.05
+820,Marketing,9.73,1,3.71
+821,Support,6.13,1,5.71
+822,Legal,1.16,1,5.71
+823,Support,1.78,1,4.01
+824,Product Management,9.25,1,5.51
+825,Sales,5.24,1,7.64
+826,Business Development,3.08,1,5.03
+827,Sales,2.29,1,1.45
+828,Business Development,4.2,1,8.21
+829,Product Management,3.5,1,3.95
+830,Accounting,5.4,1,7.81
+831,Engineering,6.64,1,6.8
+832,Accounting,8.59,1,9.0
+833,Accounting,8.03,1,8.74
+834,Marketing,7.45,1,4.59
+835,Business Development,3.2,1,1.9
+836,Support,9.37,1,2.62
+837,Sales,3.07,1,3.87
+838,Marketing,6.56,1,6.88
+839,Sales,7.73,1,4.81
+840,Human Resources,3.69,1,1.39
+841,Engineering,6.22,1,4.53
+842,Services,5.41,1,5.67
+843,Human Resources,3.0,1,1.2
+844,Support,2.86,1,4.96
+845,Support,4.78,1,9.82
+846,Human Resources,7.19,1,4.94
+847,Legal,3.07,1,3.21
+848,Training,9.78,1,8.78
+849,Research and Development,6.24,1,3.57
+850,Sales,7.8,1,9.59
+851,Accounting,3.61,1,7.56
+852,Human Resources,2.51,1,6.31
+853,Engineering,6.77,1,5.17
+854,Support,1.07,1,3.3
+855,Product Management,9.7,1,8.65
+856,Support,5.38,1,3.2
+857,Services,3.88,1,4.75
+858,Business Development,9.78,1,3.69
+859,Research and Development,4.24,1,9.26
+860,Marketing,1.57,1,7.53
+861,Training,1.24,1,5.11
+862,Marketing,7.74,1,7.1
+863,Product Management,4.76,1,1.99
+864,Services,5.6,1,5.5
+865,Research and Development,1.4,1,4.66
+866,Research and Development,9.83,1,5.7
+867,Support,3.35,1,4.33
+868,Business Development,3.04,1,2.32
+869,Support,7.66,1,6.71
+870,Product Management,4.01,1,6.64
+871,Training,9.99,1,1.82
+872,Legal,5.84,1,1.68
+873,Sales,3.88,1,3.35
+874,Support,9.92,1,9.13
+875,Sales,9.43,1,2.69
+876,Training,2.95,1,9.77
+877,Product Management,4.15,1,8.74
+878,Legal,8.39,1,8.01
+879,Product Management,1.66,1,9.98
+880,Product Management,4.73,1,9.66
+881,Marketing,5.18,1,3.1
+882,Support,7.8,1,4.3
+883,Human Resources,8.93,1,1.96
+884,Human Resources,9.75,1,5.67
+885,Training,9.49,1,1.28
+886,Human Resources,9.94,1,6.23
+887,Services,3.0,1,2.4
+888,Legal,6.87,1,2.49
+889,Product Management,6.39,1,5.45
+890,Services,1.74,1,3.71
+891,Engineering,7.67,1,2.46
+892,Product Management,2.05,1,4.69
+893,Services,3.96,1,1.87
+894,Product Management,4.69,1,8.5
+895,Support,3.06,1,2.73
+896,Research and Development,8.24,1,2.89
+897,Research and Development,1.15,1,2.1
+898,Marketing,9.43,1,5.22
+899,Services,8.99,1,5.94
+900,Support,1.87,1,4.77
+901,Legal,6.73,1,1.91
+902,Product Management,2.67,1,9.66
+903,Training,7.25,1,4.4
+904,Support,8.67,1,6.26
+905,Marketing,2.62,1,6.68
+906,Training,9.99,1,3.53
+907,Legal,5.04,1,8.27
+908,Services,4.93,1,1.77
+909,Engineering,9.07,1,1.08
+910,Services,4.36,1,8.65
+911,Research and Development,3.85,1,5.6
+912,Legal,6.67,1,3.11
+913,Training,1.74,1,2.85
+914,Engineering,4.75,1,5.09
+915,Research and Development,4.15,1,1.9
+916,Business Development,4.7,1,1.66
+917,Services,1.52,1,4.53
+918,Product Management,4.98,1,3.67
+919,Product Management,2.45,1,6.33
+920,Human Resources,7.96,1,1.18
+921,Human Resources,6.38,1,2.55
+922,Accounting,8.29,1,9.87
+923,Accounting,5.17,1,3.41
+924,Human Resources,7.59,1,7.47
+925,Product Management,4.95,1,5.69
+926,Sales,1.01,1,2.17
+927,Product Management,9.04,1,9.2
+928,Human Resources,7.67,1,4.67
+929,Engineering,6.25,1,7.73
+930,Human Resources,3.64,1,7.35
+931,Business Development,5.42,1,1.09
+932,Marketing,6.39,1,8.1
+933,Accounting,4.34,1,7.28
+934,Training,4.61,1,7.08
+935,Research and Development,6.16,1,7.88
+936,Business Development,2.75,1,8.82
+937,Support,6.16,1,4.45
+938,Human Resources,3.41,1,9.85
+939,Training,7.12,1,3.95
+940,Services,7.56,1,9.93
+941,Training,7.5,1,9.82
+942,Training,6.15,1,6.85
+943,Business Development,9.16,1,7.22
+944,Legal,7.49,1,7.77
+945,Legal,3.43,1,7.13
+946,Human Resources,4.1,1,4.0
+947,Marketing,7.3,1,2.75
+948,Research and Development,4.63,1,3.21
+949,Business Development,9.93,1,7.68
+950,Business Development,9.9,1,9.25
+951,Sales,5.6,1,9.0
+952,Marketing,7.02,1,7.58
+953,Accounting,3.44,1,6.21
+954,Research and Development,9.45,1,7.6
+955,Business Development,4.55,1,6.11
+956,Legal,5.07,1,4.91
+957,Services,4.64,1,1.95
+958,Human Resources,5.61,1,5.97
+959,Engineering,5.69,1,2.25
+960,Training,1.22,1,6.44
+961,Engineering,5.18,1,3.71
+962,Engineering,6.13,1,8.0
+963,Accounting,7.58,1,6.88
+964,Accounting,8.15,1,7.53
+965,Marketing,5.41,1,2.25
+966,Support,4.32,1,7.88
+967,Training,9.44,1,5.15
+968,Support,8.8,1,7.5
+969,Product Management,4.06,1,7.51
+970,Marketing,9.77,1,3.36
+971,Business Development,1.13,1,6.99
+972,Research and Development,6.19,1,2.25
+973,Engineering,9.36,1,6.06
+974,Engineering,4.6,1,8.41
+975,Sales,3.41,1,4.67
+976,Legal,9.87,1,4.87
+977,Support,6.1,1,8.24
+978,Legal,5.33,1,5.4
+979,Training,4.05,1,5.79
+980,Product Management,9.1,1,5.51
+981,Support,7.23,1,6.01
+982,Marketing,5.59,1,5.89
+983,Accounting,6.76,1,1.89
+984,Human Resources,3.97,1,3.93
+985,Human Resources,1.98,1,5.74
+986,Accounting,5.14,1,7.64
+987,Legal,7.89,1,4.05
+988,Services,4.39,1,4.49
+989,Product Management,3.01,1,7.98
+990,Support,5.1,1,8.71
+991,Support,3.66,1,4.72
+992,Accounting,6.31,1,2.35
+993,Legal,1.77,1,7.04
+994,Legal,6.83,1,5.05
+995,Services,8.09,1,2.8
+996,Business Development,2.41,1,6.97
+997,Accounting,1.24,1,9.99
+998,Support,5.05,1,6.15
+999,Support,3.65,1,1.89
+1000,Training,1.93,1,2.73
