@@ -4,24 +4,43 @@ import MySQLdb
 import sys
 import csv
 
-
-# conexión a la base de datos
-def connect_data_base():
+# establecemos conexión con el servidor mysql
+def connect_mysql():
     try:
-        db = MySQLdb.connect("localhost","root","","companydata" )
+        db = MySQLdb.connect("localhost","root","" )
     except MySQLdb.Error as e:
-        print("No se pudo conectar a la base de datos: ", e)
+        print("No se pudo conectar: ", e)
         sys.exit(1) 
     print("Conexión correcta.")
     return db
-    
-    
-# creación de tabla en la base de datos
+
+
+# creamos base de datos
+def creacion_database(cursor, db_name):
+    try:
+        cursor.execute(f"CREATE DATABASE IF NOT EXISTS {db_name};")
+        print(f'Se creó correctamente la base de datos "{db_name}"')
+    except MySQLdb.Error as e:
+        print(f"Error al crear la base de datos: {e}")
+
+
+# seleccionamos la base de datos a usar
+def select_database(cursor, db_name):
+    try:
+        cursor.execute(f"USE {db_name};")
+        print(f'Se seleccionó la base de datos "{db_name}"')
+    except MySQLdb.Error as e:
+        print(f"Error al seleccionar la base de datos: {e}")
+
+
+# creamos la tabla en la base de datos
 def creacion_tabla(cursor, tabla, columnas):
-    cursor.execute(f'DROP TABLE IF EXISTS {tabla}')
-    cursor.execute(f"CREATE TABLE {tabla} ({', '.join(columnas)})")
-    if(cursor):
+    try:
+        cursor.execute(f'DROP TABLE IF EXISTS {tabla};')
+        cursor.execute(f"CREATE TABLE {tabla} ({', '.join(columnas)});")
         print(f'Se ha creado la tabla {tabla}')
+    except MySQLdb.Error as e:
+        print(f"Error al crear la tabla: {e}")
 
 
 # asignamos nombre a la tabla y sus columnas con sus respectivos tipos de datos
@@ -34,15 +53,18 @@ columnas = [
     'salary FLOAT'
 ]
 
-# cursor 
-db = connect_data_base()
-cursor = db.cursor() 
+# crear la base de datos y seleccionar
+db = connect_mysql()
+cursor = db.cursor()
 
+
+creacion_database(cursor, 'companydata')
+select_database(cursor, 'companydata')
 creacion_tabla(cursor, tabla_empl, columnas)
 
 
 # inserción de datos a la tabla mediante la lectura de un archivo csv
-def insertar_datos():
+def insertar_datos(cursor, db):
     with open('employeeperformance.csv', mode='r', encoding='utf-8') as csv_file:
         lector = csv.reader(csv_file, delimiter=',', quotechar='"')
         next(lector)
@@ -60,7 +82,7 @@ def insertar_datos():
         db.rollback()
         
 
-insertar_datos()
+insertar_datos(cursor, db)
 
  # ejecuta una consulta sql y carga el resultado en un DataFrame directamente
 def create_dataframe(db, tabla):
@@ -69,7 +91,6 @@ def create_dataframe(db, tabla):
     return df
 
 df = create_dataframe(db, tabla_empl)
-# print(df)
 
 
 cursor.close()
