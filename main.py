@@ -53,7 +53,7 @@ columnas = [
     'salary FLOAT'
 ]
 
-# crear la base de datos y seleccionar
+# creamos cursor
 db = connect_mysql()
 cursor = db.cursor()
 
@@ -92,7 +92,7 @@ def create_dataframe(db, tabla):
 
 df = create_dataframe(db, tabla_empl)
 
-
+# cerramos el cursor y conexión
 cursor.close()
 db.close()
 
@@ -148,7 +148,6 @@ def correlacion_2(df):
 
 print('\nCorrelación entre salary y performance_score: ')
 print(correlacion_2(df))
-
 
 
 # graficos
