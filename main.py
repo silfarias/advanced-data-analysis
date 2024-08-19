@@ -4,188 +4,195 @@ import MySQLdb
 import sys
 import csv
 
-# establecemos conexión con el servidor mysql
-def connect_mysql():
-    try:
-        db = MySQLdb.connect("localhost","root","" )
-    except MySQLdb.Error as e:
-        print("No se pudo conectar: ", e)
-        sys.exit(1) 
-    print("Conexión correcta.")
-    return db
+class MySQLConnection:
+    def __init__(self, host="localhost", user="root", password=""):
+        self.host = host
+        self.user = user
+        self.password = password
+        self.connection = None
+        self.cursor = None
 
-
-# creamos base de datos
-def creacion_database(cursor, db_name):
-    try:
-        cursor.execute(f"CREATE DATABASE IF NOT EXISTS {db_name};")
-        print(f'Se creó correctamente la base de datos "{db_name}"')
-    except MySQLdb.Error as e:
-        print(f"Error al crear la base de datos: {e}")
-
-
-# seleccionamos la base de datos a usar
-def select_database(cursor, db_name):
-    try:
-        cursor.execute(f"USE {db_name};")
-        print(f'Se seleccionó la base de datos "{db_name}"')
-    except MySQLdb.Error as e:
-        print(f"Error al seleccionar la base de datos: {e}")
-
-
-# creamos la tabla en la base de datos
-def creacion_tabla(cursor, tabla, columnas):
-    try:
-        cursor.execute(f'DROP TABLE IF EXISTS {tabla};')
-        cursor.execute(f"CREATE TABLE {tabla} ({', '.join(columnas)});")
-        print(f'Se ha creado la tabla {tabla}')
-    except MySQLdb.Error as e:
-        print(f"Error al crear la tabla: {e}")
-
-
-# asignamos nombre a la tabla y sus columnas con sus respectivos tipos de datos
-tabla_empl = 'employeeperformance'
-columnas = [
-    'id INT PRIMARY KEY AUTO_INCREMENT',
-    'department VARCHAR(255)',
-    'performance_score FLOAT',
-    'years_with_company INT',
-    'salary FLOAT'
-]
-
-# creamos cursor
-db = connect_mysql()
-cursor = db.cursor()
-
-
-creacion_database(cursor, 'companydata')
-select_database(cursor, 'companydata')
-creacion_tabla(cursor, tabla_empl, columnas)
-
-
-# inserción de datos a la tabla mediante la lectura de un archivo csv
-def insertar_datos(cursor, db):
-    with open('employeeperformance.csv', mode='r', encoding='utf-8') as csv_file:
-        lector = csv.reader(csv_file, delimiter=',', quotechar='"')
-        next(lector)
+    def connect(self):
         try:
-            for row in lector:
-                cursor.execute(f"INSERT INTO {tabla_empl} (id, department, performance_score, years_with_company, salary) VALUES ( %s, %s, %s, %s, %s )", row[0:5])
-        except csv.Error:
-            print('Ha ocurrido un error al insertar los datos')
-            sys.exit()
-    try:
-        db.commit()
-        print('Datos insertados correctamente.')
-        print("filas insertadas:", cursor.execute("SELECT * FROM employeeperformance"))
-    except:
-        db.rollback()
-        
+            self.connection = MySQLdb.connect(self.host, self.user, self.password)
+            self.cursor = self.connection.cursor()
+            print("Conexión correcta.")
+        except MySQLdb.Error as e:
+            print("No se pudo conectar: ", e)
+            sys.exit(1)
 
-insertar_datos(cursor, db)
+    def close(self):
+        if self.cursor:
+            self.cursor.close()
+        if self.connection:
+            self.connection.close()
+            print("Conexión cerrada.")
 
- # ejecuta una consulta sql y carga el resultado en un DataFrame directamente
-def create_dataframe(db, tabla):
-    consulta = f'SELECT * FROM {tabla}'
-    df = pd.read_sql(consulta, db)
-    return df
+    def execute(self, query):
+        try:
+            self.cursor.execute(query)
+        except MySQLdb.Error as e:
+            print(f"Error al ejecutar la consulta: {e}")
 
-df = create_dataframe(db, tabla_empl)
+    def commit(self):
+        try:
+            self.connection.commit()
+        except:
+            self.connection.rollback()
 
-# cerramos el cursor y conexión
-cursor.close()
-db.close()
+    def create_dataframe(self, query):
+        return pd.read_sql(query, self.connection)
 
+class DatabaseManager:
+    def __init__(self, db_connection: MySQLConnection, db_name):
+        self.db_connection = db_connection
+        self.db_name = db_name
 
-# estadisticas de performance_score
-def calculos_perf_score(df):
-    stats_metascore = df.groupby('department').agg(
-        media=('performance_score', 'mean'),
-        mediana=('performance_score', 'median'),
-        desv_estandar=('performance_score', 'std'),
-    ).reset_index()
-    return stats_metascore
+    def create_database(self):
+        self.db_connection.execute(f"CREATE DATABASE IF NOT EXISTS {self.db_name};")
+        print(f'Se creó correctamente la base de datos "{self.db_name}"')
 
+    def select_database(self):
+        self.db_connection.execute(f"USE {self.db_name};")
+        print(f'Se seleccionó la base de datos "{self.db_name}"')
 
-estad_perf_score = calculos_perf_score(df)
-print('\nEstadisticas segun el Performance Score:')
-print(estad_perf_score)
+    def create_table(self, table_name, columns):
+        self.db_connection.execute(f'DROP TABLE IF EXISTS {table_name};')
+        self.db_connection.execute(f"CREATE TABLE {table_name} ({', '.join(columns)});")
+        print(f'Se ha creado la tabla {table_name}')
 
-# estadisticas de salary
-def calculos_salary(df):
-    stats_salary = df.groupby('department')['salary'].agg([
-        'mean',
-        'median',
-        'std'
-    ])
-    return stats_salary
+class DataInserter:
+    def __init__(self, db_connection: MySQLConnection, table_name):
+        self.db_connection = db_connection
+        self.table_name = table_name
 
-estad_salary = calculos_salary(df)
-print('\nEstadisticas segun el Salario:')
-print(estad_salary)
-
-
-# Numero de empleados por departamento
-def empl_depart(df):
-    return df.groupby('department').size()
-
-total_empl = empl_depart(df)
-print('\nNúmero total de empleados por departamento:')
-print(total_empl)
-
-
-# correlación entre years_with_company
-def correlacion_1(df):
-    return df['years_with_company'].corr(df['performance_score'])
-
-print('\nCorrelación entre years_with_company y performance_score: ')
-print(correlacion_1(df))
-
-
-# correlacion entre salary y performace_score
-def correlacion_2(df):
-    return df['salary'].corr(df['performance_score'])
-
-print('\nCorrelación entre salary y performance_score: ')
-print(correlacion_2(df))
+    def insert_data_from_csv(self, csv_file_path):
+        with open(csv_file_path, mode='r', encoding='utf-8') as csv_file:
+            reader = csv.reader(csv_file, delimiter=',', quotechar='"')
+            next(reader)  # Saltar la cabecera
+    
+            cursor = self.db_connection.cursor  # Usa el cursor existente en lugar de crear uno nuevo
+    
+            try:
+                for row in reader:
+                    cursor.execute(f"INSERT INTO {self.table_name} (id, department, performance_score, years_with_company, salary) VALUES (%s, %s, %s, %s, %s)", row[0:5])
+                self.db_connection.commit()
+                print('Datos insertados correctamente.')
+            except csv.Error as e:
+                print(f'Ha ocurrido un error al insertar los datos: {e}')
+                self.db_connection.rollback()
+                sys.exit(1)
+            except MySQLdb.Error as e:
+                print(f'Error al ejecutar la consulta: {e}')
+                self.db_connection.rollback()
+                sys.exit(1)
+            finally:
+                cursor.close()  # Cerrar el cursor después de la operación
 
 
-# graficos
 
-# histograma del performance_score por departamento
-def hist_department(df):
-    datos = df[df['department'] == 'Legal']['performance_score'] # elegimos el departamento 'Legal'
-    plt.figure(figsize=(9, 5))
-    plt.hist(datos, bins=10, alpha=0.5, edgecolor='black')
-    plt.title("Performance Score para el Departamento 'Legal' ")
-    plt.xlabel('Performance Score')
-    plt.ylabel('Frecuencia')
-    plt.grid(True)
-    plt.show()
+class StatisticsCalculator:
+    def __init__(self, df):
+        self.df = df
 
-hist_department(df)
+    def calculate_performance_stats(self):
+        return self.df.groupby('department').agg(
+            media=('performance_score', 'mean'),
+            mediana=('performance_score', 'median'),
+            desv_estandar=('performance_score', 'std')
+        ).reset_index()
 
-# gráfico de dispersión de years_with_company vs. performance_score
-def disp_years_score(df):
-    plt.figure(figsize=(9, 5))
-    plt.scatter(df['years_with_company'], df['performance_score'], alpha=0.7, edgecolors='w', s=100)
-    plt.title('Years with Company vs. Performance Score')
-    plt.xlabel('Years with Company')
-    plt.ylabel('Performance Score')
-    plt.grid(True)
-    plt.show()
+    def calculate_salary_stats(self):
+        return self.df.groupby('department')['salary'].agg([
+            'mean', 'median', 'std'
+        ])
 
-disp_years_score(df)
+    def calculate_employee_count(self):
+        return self.df.groupby('department').size()
 
-# gráfico de dispersión de salary vs. performance_score
-def disp_salary_score(df):
-    plt.figure(figsize=(9, 5))
-    plt.scatter(df['salary'], df['performance_score'], alpha=0.7, edgecolors='w', s=100)
-    plt.title('Salary vs. Performance Score')
-    plt.xlabel('Salary')
-    plt.ylabel('Performance Score')
-    plt.grid(True)
-    plt.show()
+    def calculate_correlation(self, column1, column2):
+        return self.df[column1].corr(self.df[column2])
 
-disp_salary_score(df)
+class Plotter:
+    def __init__(self, df):
+        self.df = df
 
+    def plot_histogram(self, department, column, bins=10):
+        data = self.df[self.df['department'] == department][column]
+        plt.figure(figsize=(9, 5))
+        plt.hist(data, bins=bins, alpha=0.5, edgecolor='black')
+        plt.title(f"{column} para el Departamento '{department}'")
+        plt.xlabel(column)
+        plt.ylabel('Frecuencia')
+        plt.grid(True)
+        plt.show()
+
+    def plot_scatter(self, x_column, y_column):
+        plt.figure(figsize=(9, 5))
+        plt.scatter(self.df[x_column], self.df[y_column], alpha=0.7, edgecolors='w', s=100)
+        plt.title(f'{x_column} vs. {y_column}')
+        plt.xlabel(x_column)
+        plt.ylabel(y_column)
+        plt.grid(True)
+        plt.show()
+
+# Main function
+def main():
+    # Conexión a la base de datos
+    db_connection = MySQLConnection()
+    db_connection.connect()
+
+    # Gestión de la base de datos y tabla
+    db_manager = DatabaseManager(db_connection, 'companydata')
+    db_manager.create_database()
+    db_manager.select_database()
+
+    tabla_empl = 'employeeperformance'
+    columnas = [
+        'id INT PRIMARY KEY AUTO_INCREMENT',
+        'department VARCHAR(255)',
+        'performance_score FLOAT',
+        'years_with_company INT',
+        'salary FLOAT'
+    ]
+    db_manager.create_table(tabla_empl, columnas)
+
+    # Inserción de datos desde un archivo CSV
+    data_inserter = DataInserter(db_connection, tabla_empl)
+    data_inserter.insert_data_from_csv('employeeperformance.csv')
+
+    # Creación de DataFrame desde la base de datos
+    df = db_connection.create_dataframe(f'SELECT * FROM {tabla_empl}')
+
+    # Cálculo de estadísticas
+    stats_calculator = StatisticsCalculator(df)
+    performance_stats = stats_calculator.calculate_performance_stats()
+    salary_stats = stats_calculator.calculate_salary_stats()
+    employee_count = stats_calculator.calculate_employee_count()
+
+    print('\nEstadísticas según el Performance Score:')
+    print(performance_stats)
+
+    print('\nEstadísticas según el Salario:')
+    print(salary_stats)
+
+    print('\nNúmero total de empleados por departamento:')
+    print(employee_count)
+
+    print('\nCorrelación entre years_with_company y performance_score:')
+    print(stats_calculator.calculate_correlation('years_with_company', 'performance_score'))
+
+    print('\nCorrelación entre salary y performance_score:')
+    print(stats_calculator.calculate_correlation('salary', 'performance_score'))
+
+    # Graficar resultados
+    plotter = Plotter(df)
+    plotter.plot_histogram('Legal', 'performance_score')
+    plotter.plot_scatter('years_with_company', 'performance_score')
+    plotter.plot_scatter('salary', 'performance_score')
+
+    # Cerrar la conexión
+    db_connection.close()
+
+if __name__ == "__main__":
+    main()
